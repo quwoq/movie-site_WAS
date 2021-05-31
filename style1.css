@@ -1,0 +1,327 @@
+﻿
+.header {
+        padding: 30px;
+        text-align: center;
+        background: white;
+    }
+.header h1 {
+        font-size: 50px;
+}
+
+body {
+        background: white;
+        width: auto;
+		height: 100%;
+		position: relative;
+		max-height: 75%;
+        margin:20px auto;
+        padding: 0;
+        font-family:"맑은 고딕";
+        font-size:0.9em; 
+
+}
+
+
+
+.footer1 {
+	display: table;         /* 표시 형태 */
+	width: 100%;            /* 너비 */
+	height: 40px;           /* 높이 */
+    background: rgba(44, 42, 39, 0.983);  /* 배경색 */
+	color: white;        /* 글자색 */
+	text-align: ;     /* 글자의 배치 */
+	vertical-align: middle; /* 글자의 배치 */
+	position: relative;
+	bottom: -600px;
+} 
+
+
+/*상단 메뉴바*/
+nav ul {
+	    width:100%;
+                background-color: rgba(44, 42, 39, 0.983);
+                list-style-type: none;
+         }
+         nav ul li {
+                display: inline-block;
+            }
+ 
+            .dropdown {
+                position: relative;
+	    width:19%;
+	    text-align:center;
+
+            }
+
+            .dropdown-menu { 
+                background-color: dark; 
+                color: white;
+                padding: 30px;
+                font-size: 30px;
+                cursor: pointer;	
+            }
+
+            .dropdown-content {
+                display: none;
+	    position: absolute;
+                background-color: #f9f9f9;
+                min-width: 500px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+
+            .dropdown-content a {
+                color: black;
+                margin: 19px 19px;
+	   font-size: 30px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .dropdown-menu:hover:not(.home){
+                background-color: dark;
+                color: white;
+            }
+/*상단 메뉴바*/
+
+/* 영화정보 */
+
+.movie {
+	display: table;        
+	width: 97%;          
+	height: 40px;          
+	background: rgba(44, 42, 39, 0.983);  /* 배경색 */
+	color: white;        
+	text-align: center;  
+	vertical-align: middle;
+	margin: 30px;
+	font-size: 40px;
+	padding-top: 20px;
+    }
+
+	.title {
+            display: table;       
+	font-size: 50px;
+	font-weight: bolder;
+    }
+	
+	.picture {
+	margin-left: 30px;
+	
+    }
+	.check{
+	font-size: 30px;
+    }
+	.checkOn{
+	margin-left: 100px;
+	font-size: 30px;
+	color: black;
+    }
+
+/* 영화정보 */
+
+
+/*좌측 랭킹*/
+.officeLeft{
+	display: table;
+	height: auto;
+	float: left; 
+ margin-left: 200px;
+	background: rgba(44, 42, 39, 0.983);  /* 배경색 */
+}
+.officeTop_img {
+width: 200px;
+height: 250px;
+}
+
+    ul#navi {
+   
+       width: 230px;
+       text-indent: 30px;
+}
+    ul#navi, ul#navi ul {
+        margin:0;
+        padding: 0px;
+        list-style:none;
+        font-size: 25px;
+}
+    li.group {
+        margin-bottom: 3px;
+}
+    li.group div.title {
+        height: 35px;
+        line-height: 35px;
+        background:#9ab92e;
+        cursor:pointer;
+}
+    ul.sub li {
+        margin-bottom: 3px;
+        height: 72px;
+        line-height:35px;
+        background:rgba(0, 0, 0, 0.1);
+        cursor:pointer;
+
+}
+    ul.sub li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration:none;
+        color:white;
+}
+ ul.sub li:hover {
+        background:grey;
+}
+
+.rtime_div {/*실시간 이미지 배치*/
+position:absolute;
+left:500px;
+top:500px;
+visibility:hidden;
+}
+.rtime_img {
+width: 450px;
+height: 550px;
+}
+/*좌측 랭킹*/
+
+/*영화 슬라이드*/
+
+@charset "utf-8";
+/* CSS Document */
+/*RESET*/
+*{margin:0; padding:0;}
+	ul,ol,dl{list-style:none;}
+	img , video{max-width:100%; border:0;}
+	a{text-decoration:none; color:#333; display:inline-block;}
+	table{border-collapse:collapse; border-spacing:0;}
+	input , select {vertical-align:middle;}
+	html{height:100%;}
+	label{cursor:pointer;}
+	i , em , address{font-style:normal; font-weight:normal;}
+	
+/*슬라이드 몸통 */
+
+.slide{	
+	background : white;
+	position:relative;
+	float: right; width: 40%;
+	display: block;
+	height:600px;
+}
+.slide_ul{display: block;}
+.slide_ul>li{position:absolute; top:0; left:0; list-style:none;z-index:10; display: block;}
+.slide_ul>li img{}
+li{list-style: none;}
+
+.show{display:block;}
+
+
+/* 하단 동그라미 버튼 CSS*/
+.slide_btn>li{float: left; margin:0 5px 5px 0;}
+.slide_btn>li>a{display:block; width: 14px; height:14px; background: url(../images/spr.png) -24px -125px; text-indent: -999em; }
+.slide_btn>li>a.active{background-position: 0 -126px;}
+
+.slide_btn{z-index:100; position:absolute; right: 0; bottom:0; }
+
+.slide_btn:after{content:''; display:block; clear:both;}
+.slide_btn{*zoom:1;}
+
+
+/*영화 슬라이드*/
+
+
+
+
+/*맵*/
+.mapLeft{
+	display: table;
+	height: auto;
+	float: left; width: 50%;
+	position: absolute; left:100px;
+}
+.map_img {
+width: 200px;
+height: 500px;
+}
+
+    ul#map_navi {
+       width: 230px;
+       text-indent: 30px;
+}
+    ul#map_navi, ul#map_navi ul {
+        margin:0;
+        padding:0px;
+        list-style:none;
+        font-size: 25px;
+		text-align: center;
+}
+    li.map_group {
+        margin-bottom: 3px;
+        
+}
+    li.map_group div.title {
+        height: 35px;
+        line-height: 35px;
+        background:#9ab92e;
+        cursor:pointer;
+}
+    ul.map_sub li {
+        margin-bottom: 3px;
+        height:100px;
+        line-height:35px;
+        background-color: rgba(44, 42, 39, 0.983);
+        cursor:pointer;
+}
+    ul.map_sub li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration:none;
+        color:white;
+}
+ ul.map_sub li:hover {
+        background:grey;
+}
+
+.map_rtime_div {/*실시간 이미지 배치*/
+position:absolute;
+left:500px;
+top: 500px;
+visibility:hidden;
+}
+.map_rtime_img {
+width: 600px;
+height: 700px;
+}
+/*맵*/
+
+/*상영시간표*/
+.table_m {
+ border-collapse : collapse;
+ border: 1px solid black;
+ position: relative;
+ bottom: -100px;
+ margin-left: 200px;
+ width: 75%;
+ font-size: 20px;
+
+}
+
+.td_m {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+		align: center;
+      }
+.th_m {
+color: white;
+border: 1px solid black;
+padding: 18px;
+}
+/*상영시간표*/
